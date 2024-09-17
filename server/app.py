@@ -10,15 +10,25 @@ from models import db, Client, Lawyer, Case, LawyerCases,  Representation, Admin
 from datetime import datetime
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_url_path='',
+    static_folder='../client/build',
+    template_folder='../client/build'
+)
+
 api = Api(app)
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'your-secret-key'  # This is required for session security
+app.config['SECRET_KEY'] = 'your-secret-key' 
 db.init_app(app)
 migrate = Migrate(app, db)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("index.html")
 
 # Home Route
 @app.route('/')
