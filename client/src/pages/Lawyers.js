@@ -8,7 +8,7 @@ const Lawyers = () => {
   const navigate = useNavigate(); // Use navigate for routing
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/lawyers")
+    fetch("https://casemaster-cms.onrender.com/lawyers")
       .then((response) => response.json())
       .then((data) => setLawyers(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -16,7 +16,7 @@ const Lawyers = () => {
 
   const handleLawyerAdded = () => {
     // Refresh the lawyers list after adding a new lawyer
-    fetch("http://127.0.0.1:5555/lawyers")
+    fetch("https://casemaster-cms.onrender.com/lawyers")
       .then((response) => response.json())
       .then((data) => setLawyers(data))
       .catch((error) => console.error("Error fetching updated data:", error));
@@ -27,7 +27,7 @@ const Lawyers = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://127.0.0.1:5555/lawyers/${id}`, { // Use the correct API endpoint
+    fetch(`https://casemaster-cms.onrender.com/lawyers/${id}`, { // Use the correct API endpoint
       method: "DELETE",
     })
       .then((response) => {

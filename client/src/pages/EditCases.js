@@ -18,7 +18,7 @@ const EditCase = () => {
   });
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/cases/${id}`)
+    fetch(`https://casemaster-cms.onrender.com/cases/${id}`)
       .then((response) => response.json())
       .then((data) => setInitialValues(data))
       .catch((error) => console.error("Error fetching case data:", error));

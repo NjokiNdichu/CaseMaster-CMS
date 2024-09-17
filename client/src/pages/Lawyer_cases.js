@@ -7,7 +7,7 @@ const LawyerCases = () => {
   useEffect(() => {
     const fetchLawyerCases = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5555/lawyer_cases");
+        const response = await fetch("https://casemaster-cms.onrender.com/lawyer_cases");
         if (!response.ok) {
           throw new Error("Failed to fetch lawyer cases");
         }

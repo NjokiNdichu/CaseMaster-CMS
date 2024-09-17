@@ -8,7 +8,7 @@ const Cases = () => {
   const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5555/cases")
+    fetch("https://casemaster-cms.onrender.com/cases")
       .then((response) => response.json())
       .then((data) => setCases(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -16,7 +16,7 @@ const Cases = () => {
 
   const handleCaseAdded = () => {
     // Refresh the cases list after adding a new case
-    fetch("http://127.0.0.1:5555/cases")
+    fetch("https://casemaster-cms.onrender.com/cases")
       .then((response) => response.json())
       .then((data) => setCases(data))
       .catch((error) => console.error("Error fetching updated data:", error));
@@ -27,7 +27,7 @@ const Cases = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://127.0.0.1:5555/cases/${id}`, {
+    fetch(`https://casemaster-cms.onrender.com/cases/${id}`, {
       method: "DELETE",
     })
       .then((response) => {

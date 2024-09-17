@@ -18,14 +18,14 @@ const EditLawyer = () => {
 
  
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/lawyers/${id}`)
+    fetch(`https://casemaster-cms.onrender.com/lawyers/${id}`)
       .then((response) => response.json())
       .then((data) => setInitialValues(data))
       .catch((error) => console.error("Error fetching lawyer data:", error));
   }, [id]);
 
   const handleSubmit = (values) => {
-    fetch(`http://127.0.0.1:5555/lawyers/${id}`, {
+    fetch(`https://casemaster-cms.onrender.com/lawyers/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

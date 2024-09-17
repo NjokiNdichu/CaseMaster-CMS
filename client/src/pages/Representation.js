@@ -7,7 +7,7 @@ const Representation = () => {
   useEffect(() => {
     const fetchRepresentations = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5555/representation");
+        const response = await fetch("https://casemaster-cms.onrender.com/representation");
         if (!response.ok) {
           throw new Error("Failed to fetch representation data");
         }

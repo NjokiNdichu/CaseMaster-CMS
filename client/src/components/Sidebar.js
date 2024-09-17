@@ -15,7 +15,9 @@ const Sidebar = () => {
       <h2>Case Management</h2>
       <ul>
         <li>
-          <Link to="/dashboard" className={location.pathname === "/dashboard" ? "active" : ""}>
+          <Link 
+            to="/" 
+            className={location.pathname === "/dashboard" ? "active" : ""}>
             <FaHome /> Dashboard
           </Link>
         </li>

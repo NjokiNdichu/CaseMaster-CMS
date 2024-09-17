@@ -16,7 +16,7 @@ const NewLawyer = ({ onLawyerAdded }) => {
   });
 
   const handleSubmit = (values) => {
-    fetch("http://127.0.0.1:5555/lawyers", {
+    fetch("https://casemaster-cms.onrender.com/lawyers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

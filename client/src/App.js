@@ -14,7 +14,6 @@ import EditClients from "./pages/EditClients";
 import EditLawyers from "./pages/EditLawyers";
 import Representation from "./pages/Representation";
 import LawyerCases from "./pages/Lawyer_cases";
-import Login from "./pages/Login";
 import './App.css';  
 
 function App() {
@@ -25,14 +24,13 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Only show Sidebar and Navbar if not on the login page */}
-      {!isLoginPage && <Sidebar />}
+      
+      {<Sidebar />}
       <div className="main-content">
-        {!isLoginPage && <Navbar />}
+        {<Navbar />}
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/lawyers" element={<Lawyers />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/cases" element={<Cases />} />

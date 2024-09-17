@@ -18,14 +18,14 @@ const EditClient = () => {
 
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/clients/${id}`)
+    fetch(`https://casemaster-cms.onrender.com/clients/${id}`)
       .then((response) => response.json())
       .then((data) => setInitialValues(data))
       .catch((error) => console.error("Error fetching client data:", error));
   }, [id]);
 
   const handleSubmit = (values) => {
-    fetch(`http://127.0.0.1:5555/clients/${id}`, {
+    fetch(`https://casemaster-cms.onrender.com/clients/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

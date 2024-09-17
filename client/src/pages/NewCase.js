@@ -12,7 +12,7 @@ const NewCase = () => {
   });
 
   const handleSubmit = (values) => {
-    fetch('http://127.0.0.1:5555/cases', {
+    fetch('https://casemaster-cms.onrender.com/cases', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values),

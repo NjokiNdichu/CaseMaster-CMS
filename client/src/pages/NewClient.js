@@ -16,7 +16,7 @@ const NewClient = ({ onClientAdded }) => {
   });
 
   const handleSubmit = (values) => {
-    fetch("http://127.0.0.1:5555/clients", {
+    fetch("https://casemaster-cms.onrender.com/clients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
