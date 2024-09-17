@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 import os
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, render_template 
 from flask_restful import Resource, Api
 from flask_migrate import Migrate
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
