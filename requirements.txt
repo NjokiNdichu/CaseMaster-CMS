@@ -8,7 +8,9 @@ distlib==0.3.8
 filelock==3.13.1
 Flask==3.0.3
 Flask-Cors==5.0.0
+Flask-Migrate==4.0.7
 Flask-RESTful==0.3.10
+Flask-SQLAlchemy==3.1.1
 greenlet==3.0.3
 gunicorn==23.0.0
 idna==3.7
